@@ -8,9 +8,11 @@ namespace CatWorx.BadgeMaker
         // ALSO, THIS...
         // static void Main() // Entry Point
         {
-            bool isCold = true;
-            Console.WriteLine(isCold ? "drink" : "add ice"); // output: drink
-            Console.WriteLine(!isCold ? "drink" : "add ice"); // output: add ice
+            string stringNum = "2";
+            int intNum = Convert.ToInt16(stringNum);
+            Console.WriteLine("stringNum: {0}, data-type: {1}", stringNum, stringNum.GetType());
+
+            Console.WriteLine("intNum: {0}, data-type: {1}", intNum, intNum.GetType());
         }
     }
 }
