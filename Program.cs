@@ -5,9 +5,8 @@ namespace CatWorx.BadgeMaker
 {
     class Program
     {
-        static void Main(string[] args) // Entry Point
-                                        // ALSO, THIS => static void Main() // Entry Point
-
+        // =================================================================
+        static List<string> GetEmployees()
         {
             List<string> employees = new List<string>();
 
@@ -22,11 +21,28 @@ namespace CatWorx.BadgeMaker
                 }
                 employees.Add(input);
             }
+            return employees;
+        }
 
+        // ===================================================================
+        static void PrintEmployees(List<string> employees)
+        {
             for (int i = 0; i < employees.Count; i++)
             {
                 Console.WriteLine(employees[i]);
             }
         }
+
+        // ===================================================================
+
+        // Entry Point
+        static void Main(string[] args)
+        // ALSO, THIS => static void Main() // Entry Point
+        {
+            List<string> employees = GetEmployees();
+            PrintEmployees(employees);
+        }
+
+        // ===================================================================
     }
 }
