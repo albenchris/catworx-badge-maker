@@ -40,27 +40,16 @@ namespace CatWorx.BadgeMaker
         }
 
         // ===================================================================
-        static void PrintEmployees(List<Employee> employees)
-        {
-            // giving some space
-            Console.WriteLine(" ");
-
-            Console.WriteLine("Employees:");
-            for (int i = 0; i < employees.Count; i++)
-            {
-                string template = "{0,-10}\t{1,-20}\t{2}";
-                Console.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetName(), employees[i].GetPhotoUrl()));
-            }
-        }
+        
 
         // ===================================================================
 
         // Entry Point
         static void Main(string[] args)
-        // ALSO, THIS => static void Main() // Entry Point
+        // ALSO, THIS => static void Main()
         {
             List<Employee> employees = GetEmployees();
-            PrintEmployees(employees);
+            Util.PrintEmployees(employees);
         }
 
         // ===================================================================
