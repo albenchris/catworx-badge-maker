@@ -42,7 +42,6 @@ namespace CatWorx.BadgeMaker
         // ===================================================================
         
 
-        // ===================================================================
 
         // Entry Point
         static void Main(string[] args)
@@ -50,6 +49,7 @@ namespace CatWorx.BadgeMaker
         {
             List<Employee> employees = GetEmployees();
             Util.PrintEmployees(employees);
+            Util.MakeCSV(employees);
         }
 
         // ===================================================================
