@@ -30,6 +30,15 @@ namespace CatWorx.BadgeMaker
                 // if not, create it
                 Directory.CreateDirectory("data");
             }
+
+            using (StreamWriter file = new StreamWriter("data/employees.csv"))
+            {
+                for (int i = 0; i < employees.Count; i++)
+                {
+                    string template = "{0,-10}\t{1,-20}\t{2}";
+                    file.WriteLine(String.Format(template, employees[i].GetId(), employees[i].GetName(), employees[i].GetPhotoUrl()));
+                }
+            }
         }
     }
 }
