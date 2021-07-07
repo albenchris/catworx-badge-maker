@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Net;
 using System.Collections.Generic;
 using System.Drawing;
 
@@ -72,6 +73,24 @@ namespace CatWorx.BadgeMaker
             // Create image
             Image newImage = Image.FromFile("badge.png");
             newImage.Save("data/employeeBadge.png");
+
+            // instance of WebClient is disposed after code in the block has run
+            using (WebClient client = new WebClient())
+            {
+                for (int i = 0; i < employees.Count; i++)
+                {
+                    // Place employee picture onto the badge
+
+                    // Write the company name
+
+                    // Write the employee name
+
+                    // Write the employee ID
+
+                    // Create the new file
+                    
+                }
+            }
         }
     }
 }
