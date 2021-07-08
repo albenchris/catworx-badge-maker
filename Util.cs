@@ -114,6 +114,18 @@ namespace CatWorx.BadgeMaker
                     );
 
                     // Write the employee name
+                    graphic.DrawString(
+                        employees[i].GetName(),
+                        font,
+                        brush,
+                        new Rectangle(
+                            EMPLOYEE_NAME_START_X,
+                            EMPLOYEE_NAME_START_Y,
+                            BADGE_WIDTH,
+                            EMPLOYEE_NAME_HEIGHT
+                        ),
+                        format
+                    );
 
                     // Write the employee ID
 
