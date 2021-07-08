@@ -121,13 +121,25 @@ namespace CatWorx.BadgeMaker
                         new Rectangle(
                             EMPLOYEE_NAME_START_X,
                             EMPLOYEE_NAME_START_Y,
-                            BADGE_WIDTH,
+                            EMPLOYEE_NAME_WIDTH,
                             EMPLOYEE_NAME_HEIGHT
                         ),
                         format
                     );
 
                     // Write the employee ID
+                    graphic.DrawString(
+                        employees[i].GetId().ToString(),
+                        monoFont,
+                        brush,
+                        new Rectangle(
+                            EMPLOYEE_ID_START_X,
+                            EMPLOYEE_ID_START_Y,
+                            EMPLOYEE_ID_WIDTH,
+                            EMPLOYEE_ID_HEIGHT
+                        ),
+                        format
+                    );
 
                     // Create the new file
                     badge.Save("data/employeeBadge.png");
