@@ -70,9 +70,18 @@ namespace CatWorx.BadgeMaker
             int EMPLOYEE_ID_WIDTH = BADGE_WIDTH;
             int EMPLOYEE_ID_HEIGHT = 100;
 
+            // Graphics objects
+            StringFormat format = new StringFormat();
+            format.Alignment = StringAlignment.Center;
+            int FONT_SIZE = 32;
+            Font font = new Font("Arial", FONT_SIZE);
+            Font monoFont = new Font("Courier New", FONT_SIZE);
+
+            SolidBrush brush = new SolidBrush(Color.Black);
+
             // Create image
-            Image newImage = Image.FromFile("badge.png");
-            newImage.Save("data/employeeBadge.png");
+            // Image newImage = Image.FromFile("badge.png");
+            // newImage.Save("data/employeeBadge.png");
 
             // instance of WebClient is disposed after code in the block has run
             using (WebClient client = new WebClient())
@@ -80,9 +89,6 @@ namespace CatWorx.BadgeMaker
                 for (int i = 0; i < employees.Count; i++)
                 {
                     // Place employee picture onto the badge
-                    //    Convert photo URL into Image
-                    //    Convert badge template into Image
-                    //    Place the images onto a canvas
                     Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
                     Image background = Image.FromFile("badge.png");
                     Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
