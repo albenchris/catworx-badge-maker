@@ -142,7 +142,8 @@ namespace CatWorx.BadgeMaker
                     );
 
                     // Create the new file
-                    badge.Save("data/employeeBadge.png");
+                    string fileName = "data/{0}_badge.png";
+                    badge.Save(string.Format(fileName, employees[i].GetId()));
 
                 }
             }
