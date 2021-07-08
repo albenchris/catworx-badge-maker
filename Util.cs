@@ -80,6 +80,19 @@ namespace CatWorx.BadgeMaker
                 for (int i = 0; i < employees.Count; i++)
                 {
                     // Place employee picture onto the badge
+                    //    Convert photo URL into Image
+                    //    Convert badge template into Image
+                    //    Place the images onto a canvas
+                    Image photo = Image.FromStream(client.OpenRead(employees[i].GetPhotoUrl()));
+                    Image background = Image.FromFile("badge.png");
+                    Image badge = new Bitmap(BADGE_WIDTH, BADGE_HEIGHT);
+                    Graphics graphic = Graphics.FromImage(badge);
+                    graphic.DrawImage(background, new Rectangle(0, 0, BADGE_WIDTH, BADGE_HEIGHT));
+                    graphic.DrawImage(photo, new Rectangle(PHOTO_START_X, PHOTO_START_Y, PHOTO_WIDTH, PHOTO_HEIGHT));
+                    
+                    badge.Save("data/employeeBadge.png");
+                    // background.Save("data/employeeBadge.png");
+                    // photo.Save("data/placeholderImage.png");
 
                     // Write the company name
 
@@ -88,7 +101,7 @@ namespace CatWorx.BadgeMaker
                     // Write the employee ID
 
                     // Create the new file
-                    
+
                 }
             }
         }
