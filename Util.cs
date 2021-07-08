@@ -96,17 +96,29 @@ namespace CatWorx.BadgeMaker
                     graphic.DrawImage(background, new Rectangle(0, 0, BADGE_WIDTH, BADGE_HEIGHT));
                     graphic.DrawImage(photo, new Rectangle(PHOTO_START_X, PHOTO_START_Y, PHOTO_WIDTH, PHOTO_HEIGHT));
                     
-                    badge.Save("data/employeeBadge.png");
                     // background.Save("data/employeeBadge.png");
                     // photo.Save("data/placeholderImage.png");
 
                     // Write the company name
+                    graphic.DrawString(
+                        employees[i].GetCompanyName(),
+                        font,
+                        new SolidBrush(Color.White),
+                        new Rectangle(
+                            COMPANY_NAME_START_X,
+                            COMPANY_NAME_START_Y,
+                            BADGE_WIDTH,
+                            COMPANY_NAME_WIDTH
+                        ),
+                        format
+                    );
 
                     // Write the employee name
 
                     // Write the employee ID
 
                     // Create the new file
+                    badge.Save("data/employeeBadge.png");
 
                 }
             }
