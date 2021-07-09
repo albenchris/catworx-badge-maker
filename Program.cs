@@ -14,7 +14,8 @@ namespace CatWorx.BadgeMaker
         static void Main(string[] args)
         // ALSO, THIS => static void Main()
         {
-            List<Employee> employees = PeopleFetcher.GetEmployees();
+            // List<Employee> employees = GetEmployees();
+            List<Employee> employees = PeopleFetcher.GetFromAPI();
             Util.PrintEmployees(employees);
             Util.MakeCSV(employees);
             Util.MakeBadges(employees);
