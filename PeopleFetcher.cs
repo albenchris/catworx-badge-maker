@@ -1,6 +1,7 @@
 using System;
 using System.Net;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 
 namespace CatWorx.BadgeMaker
 {
@@ -49,7 +50,13 @@ namespace CatWorx.BadgeMaker
             using (WebClient client = new WebClient())
             {
                 string response = client.DownloadString("https://randomuser.me/api/?results=10&nat=us&inc=name,id,picture");
-                // Console.WriteLine(response);
+                JObject json = JObject.Parse(response);
+                // Console.WriteLine(json.SelectToken("results"));
+                Console.WriteLine(json.SelectToken("results[0].name.first"));
+                Console.WriteLine(json.SelectToken("results[1].name.first"));
+                Console.WriteLine(json.SelectToken("results[2].name.first"));
+                Console.WriteLine(json.SelectToken("results[3].name.first"));
+
             }
 
             return employees;
