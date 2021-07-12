@@ -1,17 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CatWorx.BadgeMaker
 {
     class Program
     {
-        static void Main(string[] args) // Entry Point
-        // static void Main() // Entry Point
+        // =================================================================
+        
+        
+
+
+        // Entry Point
+        static void Main(string[] args)
+        // ALSO, THIS => static void Main()
         {
-            string greeting = "Hello";
-            greeting = greeting + "World";
-            Console.WriteLine("greeting: " + greeting);
-            Console.WriteLine($"greeting {greeting}");
-            Console.WriteLine("greeting: {0}", greeting);
+            // List<Employee> employees = GetEmployees();
+            List<Employee> employees = PeopleFetcher.GetFromAPI();
+            Util.PrintEmployees(employees);
+            Util.MakeCSV(employees);
+            Util.MakeBadges(employees);
         }
+
+        // ===================================================================
     }
 }

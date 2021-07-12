@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\16124\\desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\CatWorx.BadgeMaker.csproj": {}
+    "C:\\Users\\16124\\Desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\CatWorx.BadgeMaker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\16124\\desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\CatWorx.BadgeMaker.csproj": {
+    "C:\\Users\\16124\\Desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\CatWorx.BadgeMaker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\16124\\desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\CatWorx.BadgeMaker.csproj",
+        "projectUniqueName": "C:\\Users\\16124\\Desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\CatWorx.BadgeMaker.csproj",
         "projectName": "CatWorx.BadgeMaker",
-        "projectPath": "C:\\Users\\16124\\desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\CatWorx.BadgeMaker.csproj",
+        "projectPath": "C:\\Users\\16124\\Desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\CatWorx.BadgeMaker.csproj",
         "packagesPath": "C:\\Users\\16124\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\16124\\desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\obj\\",
+        "outputPath": "C:\\Users\\16124\\Desktop\\codingBootCamp\\continuedEducation\\CatWorx.BadgeMaker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\16124\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -35,6 +35,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
